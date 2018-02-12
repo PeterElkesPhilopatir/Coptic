@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Coptic</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+        <string name ="alfa">الفا</string>
+        <string name ="beta">بيتا</string>
+        <string name ="gamma">غما</string>
+        <string name ="delta">دلتا</string>
+        <string name ="e">اي</string>
+        <string name ="so">سو</string>
+        <string name ="zeta">زيتا</string>
+        <string name ="eta">ايتا</string>
+        <string name ="theta">ثيتا</string>
+        <string name ="iota">يوطا</string>
+        <string name ="kappa">كبا</string>
+        <string name ="lavla">لفلا</string>
+        <string name ="mei">مي</string>
+        <string name ="nei">ني</string>
+        <string name ="exi">اكسي</string>
+        <string name ="omekron">اوميكرون</string>
+        <string name ="pe">بي</string>
+        <string name ="ro">رو</string>
+        <string name ="cima">سيما</string>
+        <string name ="tav">تاف</string>
+        <string name ="epslon">ابسلون</string>
+        <string name ="fi">في</string>
+        <string name ="ki">كي</string>
+        <string name ="epsi">ابسي</string>
+        <string name ="omega">اوميجا</string>
+        <string name ="shai">شاي</string>
+        <string name ="fai">فاي</string>
+        <string name ="khai">خاي</string>
+        <string name ="hory">هوري</string>
+        <string name ="janja">جنجا</string>
+        <string name ="tchema">تشيما</string>
+        <string name ="ti">تي</string>
+</resources>
