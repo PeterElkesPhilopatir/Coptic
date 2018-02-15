@@ -13,9 +13,10 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="79dp"
-        android:layout_marginStart="79dp"
-        android:layout_marginTop="91dp" />
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:src="@mipmap/ic_launcher" />
 
     <TextView
         android:id="@+id/spellTextView"
@@ -23,8 +24,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_marginEnd="34dp"
-        android:layout_marginRight="34dp"
-        android:text="ينطق" />
+        android:layout_alignTop="@+id/letterImageView"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="12dp"
+        android:text="ينطق"
+        android:textSize="50sp" />
 </RelativeLayout>

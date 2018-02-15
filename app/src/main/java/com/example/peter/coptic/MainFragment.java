@@ -1,6 +1,8 @@
 package com.example.peter.coptic;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -22,11 +25,14 @@ public class MainFragment extends Fragment implements AdapterView.OnItemClickLis
     List<Letter> letters;
     GridView gridView;
     Adapter mAdapter;
-
     Letter selectedLetter;
 
     public MainFragment() {
         // Required empty public constructor
+    }
+
+    public interface Callback {
+        public void OnItemSelected(Letter position);
     }
 
     @Override
@@ -232,12 +238,35 @@ public class MainFragment extends Fragment implements AdapterView.OnItemClickLis
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         selectedLetter = letters.get(position);
-        showToast("You clicked on " + selectedLetter.getName());
-
+        CustomToast(selectedLetter.getName());
+//        showToast("You clicked on " + selectedLetter.getName());
+        ((Callback) getActivity()).OnItemSelected(selectedLetter);
     }
+
     // Because iam lazy to write this line :D
     public void showToast(String msg) {
         Toast.makeText(getActivity(), msg, Toast.LENGTH_SHORT).show();
     }
+
+    @SuppressLint("SetTextI18n")
+    public void CustomToast(String msg) {
+        Toast toast = new Toast(getActivity());
+        TextView textView = new TextView(getActivity());
+        textView.setText(msg);
+
+        setFont(textView, "BArabics_0.ttf");
+
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.setView(textView);
+        toast.show();
+    }
+
+    public void setFont(TextView textView, String fontname) {
+        String fontPath = "fonts/" + fontname;
+        Typeface tf = Typeface.createFromAsset(getActivity().getAssets(), fontPath);
+        textView.setTypeface(tf);
+    }
+
+
 }
 
